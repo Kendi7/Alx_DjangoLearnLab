@@ -1,15 +1,20 @@
 
 ---
 
-### 📗 'retrieve.md`
 
-```markdown
+---
+
+### 📗 `retrieve.md`
+
+
 # Retrieve Operation
 
 ## Command
 ```python
 from books.models import Book
-Book.objects.all().values()
+
+book = Book.objects.get(title="1984")
+book.title, book.author, book.published_date
 
 #output
 
